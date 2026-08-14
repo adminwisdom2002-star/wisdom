@@ -1,0 +1,28 @@
+appId: com.wisdomschool.desktop
+productName: Wisdom School Desktop
+files:
+  - dist/**
+  - server.mjs
+  - electron/**
+  - package.json
+  - node_modules/**
+  - public/**
+directories:
+  buildResources: build
+  output: ./release
+win:
+  sign: null
+  signAndEditExecutable: false
+  target:
+    - portable
+  artifactName: WisdomSchoolDesktop-Portable-${version}.${ext}
+publish:
+  provider: generic
+  url: https://example.com/downloads
+extraResources:
+  - from: dist
+    to: dist
+  - from: data
+    to: data
+  - from: public
+    to: public
